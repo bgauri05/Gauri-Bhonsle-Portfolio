@@ -35,22 +35,16 @@ export default function Resume() {
           <h2 className="font-display text-4xl md:text-5xl text-charcoal">Download my resume</h2>
         </div>
 
-        <div className="glass-card p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="font-body text-lg text-charcoal/80 leading-[1.6]">
-            You can download my CV as a PDF. It contains my education, projects, experience and selected coursework.
-          </p>
-
-          <div>
-            <a
-              href="/images/Gauri_Bhonsle_Resume.pdf.pdf"
-              download
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full font-body text-sm text-charcoal bg-gold/10 hover:bg-gold/20 transition-colors"
-            >
-              Download Resume
-            </a>
-          </div>
+        <div className="glass-card p-8 md:p-10 flex items-center justify-center">
+          <a
+            href="/images/Gauri_Bhonsle_Resume.pdf.pdf"
+            download
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-full font-body text-sm text-charcoal bg-gold/10 hover:bg-gold/20 transition-colors"
+          >
+            Download Resume
+          </a>
         </div>
       </div>
     </section>

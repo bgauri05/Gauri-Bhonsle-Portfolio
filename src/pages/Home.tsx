@@ -10,6 +10,7 @@ import About from '@/sections/About'
 import Projects from '@/sections/Projects'
 import Experience from '@/sections/Experience'
 // Podcasts section removed per request
+import Resume from '@/sections/Resume'
 import Footer from '@/sections/Footer'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -66,6 +67,7 @@ export default function Home() {
         <About />
         <Projects />
         <Experience />
+        <Resume />
         <Footer />
       </main>
 

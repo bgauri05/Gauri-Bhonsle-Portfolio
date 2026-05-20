@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ArrowRight, Heart } from 'lucide-react'
 
-const roles = ['Data Analyst', 'ML Engineer', 'Problem Solver', 'Mumbai Girl']
 
 export default function Hero() {
   const wrapperRef = useRef<HTMLDivElement>(null)
@@ -12,7 +11,6 @@ export default function Hero() {
   const ctaRef = useRef<HTMLDivElement>(null)
   const mouseRef = useRef({ x: 0, y: 0 })
   const currentRef = useRef({ x: 0, y: 0 })
-  const [currentRole, setCurrentRole] = useState(0)
   const rafRef = useRef<number>(0)
 
   // 3D tilt effect
@@ -99,13 +97,7 @@ export default function Hero() {
     }
   }, [])
 
-  // Role cycling
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length)
-    }, 2500)
-    return () => clearInterval(interval)
-  }, [])
+  
 
   // Split text into chars
   const splitText = (text: string) => {
@@ -212,14 +204,7 @@ export default function Hero() {
               <p className="font-mono text-sm md:text-base text-charcoal/60 uppercase tracking-[0.2em] mb-3">
                 building intelligent systems with an aesthetic
               </p>
-              <div className="font-mono text-xs text-gold uppercase tracking-[0.15em] h-6">
-                <span
-                  key={currentRole}
-                  className="inline-block animate-in fade-in slide-in-from-bottom-2 duration-500"
-                >
-                  {roles[currentRole]}
-                </span>
-              </div>
+              {/* roles removed */}
             </div>
 
             {/* CTAs */}

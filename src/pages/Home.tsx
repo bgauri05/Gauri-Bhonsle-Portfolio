@@ -50,6 +50,20 @@ export default function Home() {
     }
   }, [])
 
+  // If user opened a URL with a hash (e.g. /#resume), scroll to that section
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const hash = window.location.hash
+    if (!hash) return
+    // Give the app a moment to render sections, then scroll
+    const id = hash.startsWith('#') ? hash : `#${hash}`
+    const t = setTimeout(() => {
+      const el = document.querySelector(id)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }, 200)
+    return () => clearTimeout(t)
+  }, [])
+
   return (
     <div className="relative min-h-screen">
       {/* Custom Cursor */}

@@ -37,7 +37,7 @@ export default function Resume() {
 
         <div className="glass-card p-8 md:p-10 flex items-center justify-center">
           <a
-            href="/images/Gauri_Bhonsle_Resume.pdf.pdf"
+            href={`${import.meta.env.BASE_URL}images/Gauri_Bhonsle_Resume.pdf.pdf`}
             download
             target="_blank"
             rel="noreferrer"
